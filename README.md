@@ -1,7 +1,7 @@
 # Agricultural field segmentation  
 This repository contains code for deep learning project. 
 
-All training and models parameters are in config files. For our models we used following configs: `exp_dl_hrnet.yaml` for hrnet and `exp_dl_unet.yaml` for unet resnet architecture. training is run by command
+All training and models parameters are in config files. For our models we used following configs: `exp_dl_hrnet.yaml` for HRNet w48 + COCO pretrain and `exp_dl_unet.yaml` for Unet + SeResNet50 architecture. training is run by command
 
 ```
 python3 train.py -c configs/exp_dl_hrnet.yaml
