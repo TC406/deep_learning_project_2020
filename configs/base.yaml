@@ -1,0 +1,24 @@
+# Slicer configs
+data_path: /home/zakirov/datasets/opencities/train_tier_1/ # train_tier_2/
+zoom_level: 19
+tile_size: 512
+val_percent: 0.15
+border_thickness: 20
+
+# train config
+# short_epoch: True 
+segm_arch: unet
+arch: resnet50
+optim: novograd
+lr: 1e-3
+workers: 8
+wd: 1e-4
+size: 256
+bs: 32
+decoder_warmup_epochs: 0
+criterion: [bce, 0.5,  dice,  0.5]
+phases: [{"ep":[0, 100], "lr": [ 0.01 , 0], mode: "cos"}]
+# epochs: 100 # replaced by phases now
+# datasets: [opencities, inria] # will use both datasets for training and validation
+
+name: test_run
